@@ -38,20 +38,20 @@ main {
     background-color: #00000086;
     padding: 10px;
     border: 1px solid #000000;
-    display: flex; /* Use flexbox to align items */
-    flex-direction: column; /* Arrange title and text in a column */
-    justify-content: center; /* Center content vertically */
-    text-align: center; /* Center text horizontally */
-    height: 100%; /* Occupy full height of the container */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    height: 100%;
 }
 
 .poem h2 {
-    margin-top: 0; /* Remove default margin for h2 */
-    color: #fff; /* Set the color of the poem title to white */
+    margin-top: 0;
+    color: #fff;
 }
 
 .poem p {
-    margin: 0; /* Remove default margin for p */
+    margin: 0;
     color: #fff; /* Set the color of the poem text to white */
 }
 
@@ -62,6 +62,14 @@ main {
 
 .poem button.download-button {
     margin-top: 10px;
+}
+
+/* Add margin between poems in each row */
+.poems::before {
+    content: '';
+    width: 20px;
+    height: 1px;
+    display: block;
 }
 
 /* Adjust styles for mobile devices */
