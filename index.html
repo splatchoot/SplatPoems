@@ -1,204 +1,81 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Splat Poems</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/x-icon" href="icon.ico">
-</head>
-<body>
-    <header>
-        <h1>Splat Poems</h1>
-    </header>
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('background.jpg');
+    background-size: cover;
+    transition: background-position 0.3s ease;
+}
 
-    <main>
-        <section class="profiles">
-            <!-- Your profiles can be added here -->
-        </section>
+header {
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
 
-        <section class="poems">
-                        <div class="poem">
-                <h2>Deathbed</h2>
-                <pre>
-As I lie here on my deathbed
-I can't help but feel a sense of gladness
-For though my time on earth is ending
-I am surrounded by love and joy
+header h1 {
+    margin: 0;
+}
 
-My loved ones are all around me
-Holding my hand and wiping my brow
-Their love and care have been a comfort
-As I journey towards the great unknown
+main {
+    padding: 20px;
+}
 
-I am at peace with my passing
-For I have lived a rich and full life
-I am grateful for the memories
-That I will take with me into the night
+.profiles,
+.poems {
+    margin-bottom: 20px;
+}
 
-So as I take my final breath
-I do so with a heart full of love
-And the knowledge that I will be forever
-Missed but never forgotten
+.poems {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(200px, 1fr));
+    grid-gap: 20px;
+    overflow: auto;
+}
 
-Goodbye, dear world, and thank you
-For all the beauty and happiness
-You have brought into my life.
-                </pre>
-                <a href="poems/deathbed.txt" download><button class="download-button">Download</button></a>
-            </div>
-            <div class="poem">
-                <h2>Rainy Days</h2>
-                <pre>Rainy days, oh how they shine
-Bringing joy and peace of mind
-The world outside is fresh and new
-As the rain washes away the dew
+.poem {
+    background-color: #00000086;
+    padding: 10px;
+    border: 1px solid #000000;
+    display: flex; /* Use flexbox to align items */
+    flex-direction: column; /* Arrange title and text in a column */
+    justify-content: center; /* Center content vertically */
+    text-align: center; /* Center text horizontally */
+    height: 100%; /* Occupy full height of the container */
+}
 
-The pitter patter of the rain
-Is a cheerful sound that fills my ears
-It's a chance to dance and sing
-And let go of all my fears
+.poem h2 {
+    margin-top: 0; /* Remove default margin for h2 */
+    color: #fff; /* Set the color of the poem title to white */
+}
 
-So I put on my raincoat and boots
-And head out into the pouring rain
-I twirl and spin and jump and play
-Feeling alive and free again
+.poem p {
+    margin: 0; /* Remove default margin for p */
+    color: #fff; /* Set the color of the poem text to white */
+}
 
-For rainy days are meant to be celebrated
-A time to laugh and let our spirits roam
-So let the rain fall, let it pour
-For in this moment, we are free to explore
+.poem:hover {
+    transition: background-color 1.0s ease, background-image 1.0s ease;
+    background-image: linear-gradient(to top, rgba(110, 110, 110, 0.459), rgba(180, 180, 180, 0.513));
+}
 
-The world is ours on a rainy day
-So let's embrace it, come what may
-For in the rain, there is beauty and wonder
-And the chance to feel alive and full of thunder.</pre>
-                <a href="poems/rainy_days.txt" download><button class="download-button">Download</button></a>
-            </div>
-            <div class="poem">
-                <h2>Life</h2>
-                <pre>Life is a precious gift, oh so rare
-A chance to love and laugh and care
-To explore the world and all it has to offer
-To live each day to the very fullest
+.poem button.download-button {
+    margin-top: 10px;
+}
 
-So let us not take a single moment for granted
-But embrace each day with open hearts and minds
-Let us seek out joy and happiness
-And leave behind the worries and strife
-
-For every single day is a chance to live
-To love and laugh and learn and give
-To create memories that will last a lifetime
-And to find meaning in this journey of mine
-
-So let us make the most of every single day
-For tomorrow is not promised, it's true
-But today is ours, to do with as we please
-So let's live it to the very fullest, my friend, and seize
-
-The opportunity to be happy, to be free
-To follow our dreams and make them a reality
-For every single day is a chance to shine
-So let's make the most of it, one day at a time.</pre>
-                <a href="poems/life.txt" download><button class="download-button">Download</button></a>
-            </div>
-            <div class="poem">
-                <h2>Grim Repear</h2>
-                <pre>Grim Reaper, oh so dreary,
-Feeling lost and feeling weary.
-No joy in life, no light in sight,
-Only darkness, only night.
-
-Grim Reaper, once so proud,
-Now feeling lost, feeling cowed.
-No purpose left, no meaning found,
-Feeling empty, feeling bound.
-
-But even in the darkest days,
-There is hope, there is a way.
-With courage, strength, and a little grace,
-We can lift the veil, we can find our place.
-
-So Grim Reaper, take heart,
-There is so much more for you to start.
-A new beginning, a fresh start,
-A chance to find joy, a chance to find art.</pre>
-                <a href="poems/grim_reaper.txt" download><button class="download-button">Download</button></a>
-            </div>
-            <div class="poem">
-                <h2>Steampunk age</h2>
-                <pre>In a world of gears and steam,
-Where brass and copper gleam,
-The Steampunk Age has come to be,
-A place of wonder, a place to see.
-
-The steam engines roar and whine,
-As they power the machines in time,
-The airships soar through the skies,
-Soaring higher, reaching new heights.
-
-The Victorian era's influence,
-Is evident in every instance,
-But with a twist of science fiction,
-A world of possibility, a world of conviction.
-
-The Steampunk Age is a place to explore,
-A world of fantasy, a world of lore,
-So come and join the adventure,
-In this world of steam and splendor.</pre>
-                <a href="poems/steampunk.txt" download><button class="download-button">Download</button></a>
-            </div>
-            <div class="poem">
-                <h2>Sad love</h2>
-                <pre>The wind whispers softly,
-As the rain falls from the sky.
-Tears streaming down my face,
-As I say goodbye.
-
-I stand alone in the darkness,
-As the world passes by.
-My heart heavy with sorrow,
-As I watch the love of my life die.
-
-The pain is too much to bear,
-As I fall to my knees.
-I cry out to the heavens,
-As I beg for some kind of release.
-
-But there is no solace,
-No comfort to be found.
-I am left with nothing,
-But the memory of your sound.
-
-I will love you forever,
-Even in death you remain.
-But the pain of your absence,
-Is a constant, aching pain.
-
-I am but a shadow of my former self,
-A shell of what I used to be.
-Without you by my side,
-I am lost and incomplete.
-
-So I stand here, in the rain,
-As the world moves on without you.
-And I am left with nothing,
-But the saddest love that ever was true.</pre>
-                <a href="poems/sad_love.txt" download><button class="download-button">Download</button></a>
-            </div>
-            <div class="poem">
-                <h2>Rainy Days</h2>
-                <pre>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</pre>
-                <a href="poems/rainy_days.txt" download><button class="download-button">Download</button></a>
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <pre>&copy; 2023 splatchoot</pre>
-    </footer>
-
-    <script src="scripts.js"></script>
-</body>
-</html>
+/* Adjust styles for mobile devices */
+@media only screen and (max-width: 768px) {
+    header {
+        padding: 10px;
+    }
+    
+    .poems {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        grid-gap: 10px;
+    }
+    
+    .poem {
+        padding: 5px;
+    }
+}
