@@ -7,7 +7,7 @@
 
     const poem_storage = document.getElementById("poems");
     for (let poem of poems) {
-        let poem_contents = await (await fetch(host + "/poems/" + poem + ".txt")).text();
+        let poem_contents = (await (await fetch(host + "/poems/" + poem + ".txt")).text()).trim();
 
         const poem_element = document.createElement("div");
         poem_element.setAttribute("class", "poem");
