@@ -34,7 +34,7 @@ main {
 .poems {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: flex-start; /* Align poems to the left */
 }
 
 .poem {
@@ -42,8 +42,8 @@ main {
     padding: 10px;
     text-align: center;
     margin: 8px;
-    max-width: 300px;
-    word-wrap: break-word; /* Ensure the text wraps within the box */
+    word-wrap: break-word;
+    flex: 0 1 calc(33.33% - 16px); /* Each poem occupies one-third of the available width */
 }
 
 .poem div {
@@ -82,6 +82,6 @@ main {
     .poem {
         margin: 5px;
         padding: 8px;
-        max-width: 100%;
+        flex: 0 1 calc(100% - 10px); /* Each poem occupies the full width with a 5px margin */
     }
 }
