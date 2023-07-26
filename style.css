@@ -38,10 +38,21 @@ main {
     background-color: #00000086;
     padding: 10px;
     border: 1px solid #000000;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    grid-gap: 20px;
-    overflow: auto;
+    display: flex; /* Use flexbox to align items */
+    flex-direction: column; /* Arrange title and text in a column */
+    justify-content: center; /* Center content vertically */
+    text-align: center; /* Center text horizontally */
+    height: 100%; /* Occupy full height of the container */
+}
+
+.poem h2 {
+    margin-top: 0; /* Remove default margin for h2 */
+    color: #fff; /* Set the color of the poem title to white */
+}
+
+.poem p {
+    margin: 0; /* Remove default margin for p */
+    color: #fff; /* Set the color of the poem text to white */
 }
 
 .poem:hover {
@@ -58,12 +69,12 @@ main {
     header {
         padding: 10px;
     }
-
+    
     .poems {
         grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
         grid-gap: 10px;
     }
-
+    
     .poem {
         padding: 5px;
     }
