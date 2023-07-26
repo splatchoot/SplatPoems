@@ -41,8 +41,9 @@ main {
     background-color: #00000086;
     padding: 10px;
     text-align: center;
-    margin: 8px; /* Reduce the margin to make the boxes slightly narrower */
+    margin: 8px;
     max-width: 300px;
+    word-wrap: break-word; /* Ensure the text wraps within the box */
 }
 
 .poem div {
@@ -79,8 +80,8 @@ main {
     }
     
     .poem {
-        margin: 5px; /* Adjust margin to fit within the screen width */
-        padding: 8px; /* Adjust padding to fit within the screen width */
+        margin: 5px;
+        padding: 8px;
         max-width: 100%;
     }
 }
